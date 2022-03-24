@@ -12,7 +12,8 @@ public class Main {
 
        int [] arr = {1,2,3,4,5,6,7,8,9};
 
-       int ans = linearSearch(arr, 6);
+//       int ans = linearSearch(arr, 6);
+        int ans = linearSearchReturnElement(arr , 10);
         System.out.println(ans);
 //        Q: Find whether 4 exists in the arr array??
 //        Ans: firstly iterate over the given array and search for the value on each index
@@ -54,4 +55,24 @@ public class Main {
         }
         return -1;
     }
+
+    static int linearSearchReturnElement(int[] arr ,int target){
+
+        // if array is empty
+        if(arr.length == 0){
+            return Integer.MAX_VALUE;
+        }
+
+        // for searching
+        for (int element : arr) {
+            // check for element at each index if it is == target
+            if (element == target) {
+                return element;
+            }
+
+        }
+        return Integer.MAX_VALUE;
+    }
+
+
 }
