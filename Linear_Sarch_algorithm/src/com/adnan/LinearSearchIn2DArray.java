@@ -12,9 +12,11 @@ public class LinearSearchIn2DArray {
         };
 
         int target =344;
-        int[] ansArr = search(arr,target);
+//        int[] ansArr = search(arr,target);
+//        System.out.println(Arrays.toString(ansArr));
 
-        System.out.println(Arrays.toString(ansArr));
+        int ans = MaxItem2d(arr);
+        System.out.println(ans);
     }
 
     static int[] search(int[][] arr, int target) {
@@ -28,5 +30,19 @@ public class LinearSearchIn2DArray {
         }
 //        if target not found return -1 in a new array
         return new int[]{-1};
+    }
+
+    static int MaxItem2d (int[][] arr){
+        int max = Integer.MIN_VALUE;
+        for (int row = 0; row < arr.length; row++) {
+            for (int col = 0; col < arr[row].length; col++) {
+                if(arr[row][col] > max)
+                    max = arr[row][col];
+//                    returning the row index and col index of the 2d array in another array
+            }
+
+        }
+//        if target not found return -1 in a new array
+        return max;
     }
 }
