@@ -22,4 +22,16 @@ public class LinearSearchInString {
         }
         return false;
     }
+
+    static boolean search2(String name, char target) {
+        if(name.length()==0){
+            return false;
+        }
+        for(char ch : name.toCharArray()){
+            if(ch == target ){
+                return true;
+            }
+        }
+        return false;
+    }
 }
