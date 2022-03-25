@@ -61,10 +61,20 @@ public class EvenDigitsQuestion {
 
 //    check if num is even
     static boolean even(int num){
-        int noofDigit = digits(num);
+//        int noofDigit = digits(num);
+        int noofDigit = digits2(num);
         return noofDigit % 2 == 0;
     }
 
+//    more optimized code for counting digits
+    static int digits2(int num){
+        if(num<0){
+            num = num * -1;
+        }
+        return (int)(Math.log10(num) +1);
+    }
+
+//    for counting digits
     static int digits(int num){
         int count = 0;
         if(num<0){
