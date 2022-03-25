@@ -12,7 +12,6 @@ public class minValueInArr {
             if(ans > arr[i]){
                 ans = arr[i];
             }
-
         }
         return ans;
     }
