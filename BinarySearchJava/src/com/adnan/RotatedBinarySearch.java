@@ -1,3 +1,12 @@
+// the main ideology in searching in a rotated array with rotated binary search is
+// 1. first we place pointers for start mid and end of an array
+// 2. then we search for the pivot by taking the condition in consideration that
+//    the pivot is the largest element of the array and as many times the array is rotated the pivot shifts
+//    away from the start  .
+// 3. so if the mid is our pivot (assume it) then its next element i.e. the mid+1 element will be smaller
+//    than  the mid-element and also the mid-1 element will also be smaller than the mid-element..
+
+
 package com.adnan;
 
 public class RotatedBinarySearch {
