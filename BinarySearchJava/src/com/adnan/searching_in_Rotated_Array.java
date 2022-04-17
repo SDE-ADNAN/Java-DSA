@@ -1,10 +1,12 @@
 package com.adnan;
 
-public class searching_in_Rotated_binarySearch {
+// here in this e.g. we will search for the target in a rotated array using binary search and pivot .
+
+public class searching_in_Rotated_Array {
     public static void main(String[] args) {
         int[] arr = {4,5,6,7,0,1,2,3};
 
-        System.out.println(findPivot(arr));
+        System.out.println(search(arr,6));
     }
 
     static int search(int[] arr ,int target){
@@ -21,7 +23,11 @@ public class searching_in_Rotated_binarySearch {
             return pivot;
         }
 
-        
+//        if the target is bigger than the start then we will search in only the range between start and pivot -1.
+        if(target >= arr[0]){
+            return BinarySearch(arr,target,0,pivot-1);
+        }
+        return BinarySearch(arr,target,pivot+1,arr.length-1);
 
     }
 
