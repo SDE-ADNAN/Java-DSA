@@ -49,7 +49,7 @@ public class searching_in_Rotated_Array {
         return -1;
     }
 
-
+// this will not work in duplicate values.
     static int findPivot(int[] arr){
         int start = 0;
         int end = arr.length -1;
@@ -89,6 +89,70 @@ public class searching_in_Rotated_Array {
                 end = mid -1;
             }else{
                 start = mid+1;
+            }
+
+        }
+        return -1;
+    }
+
+    static int findPivotWithDuplicatesInArray(int[] arr){
+        int start = 0;
+        int end = arr.length -1;
+
+        while(start<=end){
+            int mid = start+(end-start)/2;
+            // 4 cases over here
+
+            //case no.1
+            // here we are checking that if mid-item is bigger than the mid+1 item then return it
+            // as it is the required pivot i.e. the ans that we are searching for
+            // also we are checking to apply this condition only when the mid element is smaller than the end item
+            // of the array as at some point our mid may be equal to the end so in that case this check
+            // will result in the "index out of bound error " as the search will go ahead of end ..
+            if (mid<end && arr[mid] > arr[mid+1]){
+                return arr[mid];  // for returning the value of pivot
+//                return mid;   -------for returning index of pivot
+            }
+
+            // case no.2
+            // here we are checking that if mid-item is smaller than the mid-1 item then return mid-1 item
+            // as it is the required pivot i.e. the ans that we are searching for
+            // also we are checking to apply this condition only when the mid-element is bigger than the start item
+            if(mid>start && arr[mid] < arr[mid-1]){
+                return arr[mid-1];   // for returning the value of pivot
+//                return mid-1;      -------for returning index of pivot
+            }
+
+           // if elements at start, mid, end are equal then skip the duplicates
+            if(arr[mid]==arr[start] && arr[mid]==arr[end]){
+                // skip the duplicates
+                // Note: what if these elements at start and end where the pivot??
+
+                // check if start is pivot
+                if(arr[start]> arr[start+1]){
+                    return start;
+                }
+                // otherwise, increment start
+                start++;
+
+                // check if end is pivot.
+                if(arr[end]<arr[end-1]){
+                    // here we are returning the end -1 element because if the end is largest then the array
+                    // is not rotated hence this function will return -1
+                    return end-1;
+                }
+                // otherwise , decrement end
+                end--;
+            }
+            // left-side is now sorted ,so pivot should be in right-side;
+
+            // increment start if the start is smaller than mid
+            //                       or
+            // start is equal to mid and mid is bigger than the end.
+            else if(arr[start] < arr[mid] || (arr[start] == arr[mid ] && arr[mid] > arr[end])){
+                start = mid +1;
+            }else {
+                end = mid -1;
             }
 
         }
