@@ -95,7 +95,7 @@ public class searching_in_Rotated_Array {
         return -1;
     }
 
-    static int findPivotWithDuplicatesInArray(int[] arr){
+     static int findPivotWithDuplicatesInArray(int[] arr){
         int start = 0;
         int end = arr.length -1;
 
