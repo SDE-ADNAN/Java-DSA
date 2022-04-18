@@ -1,15 +1,22 @@
 package com.adnan;
 
+//in this problem we are counting the no.of rotations a rotated array has
+// it is the simplest to understand as it has 80% pre-written code and only 20% new code
+
 public class No_of_Rotations_of_array {
     public static void main(String[] args) {
         int[] arr = {4,5,6,7,0,1,2};
         System.out.println(countRotations(arr));
     }
 
+//    ////////////////////// only this section is new..
     private static int countRotations(int[] arr) {
+        // this will return the index of pivot
         int pivot = findPivot(arr);
+        // we are just adding +1 to the index as index starts from 0 in arrays..
         return pivot + 1;
     }
+//    /////////////////////// only this
 
     // use this for non duplicates
     static int findPivot(int[] arr) {
