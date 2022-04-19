@@ -41,8 +41,11 @@ Constraints:
 
 */
 
+// this question is very complicated as we are not able to differentiate among the options of whether to use binary search
+// or not to use binary search in this question this must be done multiple times to be remembered .
+
 public class Split_Arrays {
     public static void main(String[] args) {
-        
+
     }
 }
