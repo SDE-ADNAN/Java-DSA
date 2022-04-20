@@ -46,6 +46,51 @@ Constraints:
 
 public class Split_Arrays {
     public static void main(String[] args) {
+        int[] nums = {7,2,5,10,8};
 
+        System.out.println(splitArray(nums,3));
+    }
+
+    static int splitArray(int[] nums, int m){
+        // start and end are initially zero,
+        // but later they will resemble the min and max where
+        // min == minimum value that can be formed(max individual item in the array)
+        // max == max value that can be formed(by adding all the items of the array)
+        // so
+        int start = 0;
+        int end = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            start = Math.max(start,nums[i]); // this will contain max item of the array in the end of loop
+            // adding all the items and storing in end after the completion of the loop
+            end += nums[i];
+        }
+
+        // Now we will perform binary search on the given array using start and end returned from the upper loop
+        // so
+        while(start<end){
+            // try for the middle as potential ans
+            int mid = start+(end-start)/2;
+
+            // now calculate how many pieces u can divide this in with this max sum
+            int sum = 0;
+            int pieces = 1;
+            for(int num : nums){
+                if(sum + num > mid){
+                    // this means u cannot add this num to the current sub-array, make new sub-array
+                    // say u add this in new subarray , then sum == num
+                    sum  = num;
+                    pieces++;
+                }else{
+                    sum +=num;
+                }
+            }
+            if(pieces > m){
+                start = mid +1;
+            }else{
+                end = mid;
+            }
+        }
+        return end; // here start == end == mid
     }
 }
