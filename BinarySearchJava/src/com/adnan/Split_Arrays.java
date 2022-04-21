@@ -44,6 +44,10 @@ Constraints:
 // this question is very complicated as we are not able to differentiate among the options of whether to use binary search
 // or not to use binary search in this question this must be done multiple times to be remembered .
 
+// Explaination:----
+// we have to find the best distribution combination in which the splitted sub-array must contain less amount
+// of items but must have maximum sum when compared to other sub-arrays.
+
 public class Split_Arrays {
     public static void main(String[] args) {
         int[] nums = {7,2,5,10,8};
