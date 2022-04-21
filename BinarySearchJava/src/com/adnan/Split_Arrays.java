@@ -86,9 +86,11 @@ public class Split_Arrays {
                     sum  = num;
                     pieces++;
                 }else{
+                    // adding every nums item into the sum variable
                     sum +=num;
                 }
             }
+            // if pieces becomes more than m(no.of pieces) then start becomes mid + 1 to search in the second half of the array
             if(pieces > m){
                 start = mid +1;
             }else{
