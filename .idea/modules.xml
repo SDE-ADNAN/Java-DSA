@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/ALL-JAVA-DSA-Problems-solved-repo.iml" filepath="$PROJECT_DIR$/.idea/ALL-JAVA-DSA-Problems-solved-repo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BinarySearchJava/BinarySearchJava.iml" filepath="$PROJECT_DIR$/BinarySearchJava/BinarySearchJava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Linear_Sarch_algorithm/Linear_Sarch_algorithm.iml" filepath="$PROJECT_DIR$/Linear_Sarch_algorithm/Linear_Sarch_algorithm.iml" />
+    </modules>
+  </component>
+</project>
