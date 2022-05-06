@@ -11,9 +11,9 @@ public class ADNAN_sorted_Matrix_Binary_search {
             {13,14,15,16},
             {17,18,19,20},
     };
-        System.out.println(Arrays.toString(outerBS(arr,10)));
+        System.out.println(Arrays.toString(innerBs(arr,10)));
     }
-    static int[] outerBS (int[][]arr,int target){
+    static int outerBS (int[][]arr,int target){
         int start = 0;
         int end = arr.length -1;
         int rStart = arr[start][0];
@@ -21,7 +21,7 @@ public class ADNAN_sorted_Matrix_Binary_search {
         while(start<=end){
             int mid = start + (end -start)/2;
             if(arr[mid][rStart] <=target && arr[mid][rEnd]>=target){
-                return arr[mid];
+                return mid;
             }
             if(arr[mid][rStart] <=target && arr[mid][rEnd] <=target){
                 start = mid +1;
@@ -30,6 +30,7 @@ public class ADNAN_sorted_Matrix_Binary_search {
             }
 
         }
-        return new int[]{-1,-1};
+        return -1;
     }
+    
 }
