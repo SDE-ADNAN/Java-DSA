@@ -32,5 +32,21 @@ public class ADNAN_sorted_Matrix_Binary_search {
         }
         return -1;
     }
-    
+    static int[] innerBs(int[][]arr,int target){
+        int ansArr = outerBS(arr,target);
+        int start = 0;
+        int end = arr[0].length -1;;
+        while(start<=end){
+            int mid = start +(end -1)/2;
+            if(arr[ansArr][mid]==target){
+                return new int[] {ansArr,mid};
+            }
+            if(arr[ansArr][mid]<target){
+                start =mid +1;
+            }else if(arr[ansArr][mid]>target){
+                end =mid-1;
+            }
+        }
+        return new int[] {-1,-1};
+    }
 }
