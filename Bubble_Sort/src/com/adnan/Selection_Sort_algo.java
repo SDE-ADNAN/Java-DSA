@@ -8,7 +8,7 @@ public class Selection_Sort_algo {
         selectionSort(arr);
         System.out.println(Arrays.toString(arr));
     }
-
+// main function
     static void selectionSort(int[] arr){
         for (int i = 0; i < arr.length; i++) {
             // find the max element from the array and place it inthe end of the array ..
@@ -18,6 +18,7 @@ public class Selection_Sort_algo {
         }
     }
 
+    // getting the max element index
     static int getMaxIndex(int[] arr,int start, int end) {
         int max = start;
         for (int i = start; i <= end ; i++) {
@@ -27,6 +28,8 @@ public class Selection_Sort_algo {
         }
         return max ;
     }
+
+    // separate function for swapping the elements..
     static void swap(int[] arr,int first, int second){
         int temp = arr[first];
         arr[first] = arr[second];
