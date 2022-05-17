@@ -12,9 +12,12 @@ public class Insertion_Sort {
     static void insertion(int[] arr){
         for (int i = 0; i < arr.length - 1; i++) {
             for (int j = i+1; j >0 ; --j) {
+                // here we must use j--1 and not i instead
                 if(arr[j]<arr[j-1]){
+                    // here we must use j--1 and not i instead
                     swap(arr,j,j-1);
                 }else{
+                    // we are not comparing if j-1<than j as the array at lhs of j is already sorted
                     break;
                 }
             }
