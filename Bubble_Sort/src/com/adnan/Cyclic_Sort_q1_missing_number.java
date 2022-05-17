@@ -2,6 +2,7 @@ package com.adnan;
 
 public class Cyclic_Sort_q1_missing_number {
     //leetcode #268
+    // this algo is only for arrays with 0,n range 
     public static void main(String[] args) {
      int[] arr = { 4,0,1,2};
         System.out.println(Cyclic(arr));
