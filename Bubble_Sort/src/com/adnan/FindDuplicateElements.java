@@ -18,7 +18,7 @@ public class FindDuplicateElements {
                 if(arr[i] != arr[correct]) {
                     swap(arr, i, correct);
                 }else{
-                    //
+                    // if arr[i] == arr[correct] then return the number
                     return arr[i];
                 }
             }else{
