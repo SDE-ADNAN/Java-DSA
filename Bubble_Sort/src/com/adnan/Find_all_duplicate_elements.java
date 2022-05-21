@@ -22,7 +22,9 @@ public class Find_all_duplicate_elements {
 
         List<Integer> ans = new ArrayList<>();
         for (int index = 0; index < arr.length; index++) {
+            // searching for the misplaced item
             if (arr[index] != index+1) {
+                // adding it to the ans arraylist
                 ans.add(arr[index]);
             }
         }
