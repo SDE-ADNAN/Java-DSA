@@ -38,6 +38,7 @@ public class firstMissingPositive {
     }
 
 
+    
     // separate function for swapping the elements..
     static void swap(int[] arr,int first, int second){
         int temp = arr[first];
