@@ -28,17 +28,18 @@ public class firstMissingPositive {
 
         // search for the first missing element
         for (int index = 0; index <arr.length;index++){
+            // by this we find the first missing number and check this condision.
             if(arr[index]!=index+1){
                 return index+1;
             }
         }
 
-        //case 2 where the nth element is missing then;
+        //case 2 where the n+1th element is the smallest missing positive number;
         return arr.length+1;
     }
 
 
-    
+
     // separate function for swapping the elements..
     static void swap(int[] arr,int first, int second){
         int temp = arr[first];
