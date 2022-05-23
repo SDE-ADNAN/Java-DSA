@@ -17,7 +17,17 @@ public class strings_and_stringbuilders_bullet_notes {
        (if both var a and b are pointing towards the same string in the heap memory )
        these variables are stored in the stack memory but the string object is stored in the heap memory.
 
-     3.
+     3. String Pool:-
+        string pool in java is like a data structure that stores the value of a string object
+        which is referred by many other reference variables . And the most imp part of string
+        pool is that it stores only one instance of the recurring string object which in turn
+        saves a lot of time space and computational power .
+        the strings which are referred  by only one reference variable then it is simply
+        stored in the heap it doesn't enter the string pool .
+        once the string object is now no more accessed by any variable it is cleared through
+        garbage collection.
+
+     4. 
     */
 
 
