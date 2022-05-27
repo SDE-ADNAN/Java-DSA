@@ -3,9 +3,8 @@ package com.adnan;
 public class strings_and_stringbuilders_bullet_notes {
 
     public static void main(String[] args) {
-        String A = new String {
-            "adnan"
-        };
+        String A = new String("adnan");
+
     }
     /*
 
@@ -40,7 +39,9 @@ public class strings_and_stringbuilders_bullet_notes {
      5. When u only need to check/compare the value of to Strings u must use the .equals() method of the
         java String class.
 
-     6.  
+     6. for accessing the characters of a string we must not use the string[0] technique but instead
+        we should use the method defined in the String class called string.charAt(number) this takes
+        the index and returns the character at that index.
 
 
 
