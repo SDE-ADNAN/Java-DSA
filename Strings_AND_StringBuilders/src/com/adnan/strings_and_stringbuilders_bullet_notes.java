@@ -43,6 +43,12 @@ public class strings_and_stringbuilders_bullet_notes {
         we should use the method defined in the String class called string.charAt(number) this takes
         the index and returns the character at that index.
 
+     7. so now we will talk about print stream so the println function does is it takes all the arguments
+        let it be of anytype but after that it converts it to string and then prints it on to the console.
+
+     8. println uses the address of an object in a hashcode and then prints that hashcode thats why
+        we use the Arrays.toString() method to convert that hash code in to an array of elements which is done
+        by accessing the required memory location linked to the hash.
 
 
 
