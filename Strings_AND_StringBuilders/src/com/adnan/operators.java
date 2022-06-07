@@ -22,6 +22,12 @@ public class operators {
         System.out.println("adnan" + new Integer(56));// output : adnan56
 
 
-        
+        // + operator only concatinates and returns string only when  either one of
+        // the operands is a string  to be concatinated.
+        System.out.println(new Integer(56) + new ArrayList<>()); // this will not work.
+        System.out.println(new Integer(56) +""+ new ArrayList<>()); // this will work fine
+
+
+
     }
 }
