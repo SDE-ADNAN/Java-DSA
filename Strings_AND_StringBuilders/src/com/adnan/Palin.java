@@ -1,6 +1,14 @@
 package com.adnan;
 
 public class Palin {
+
+    /*
+    here we are using two pointers start and end
+    we check  if the start and end are equal to eachother
+    if they are equal till the mid of the str then the str is a palindrome.
+    
+
+    */
     public static void main(String[] args) {
         String str = "abcba";
         System.out.println(isPalindrome(str));
