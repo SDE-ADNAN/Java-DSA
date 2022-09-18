@@ -1,4 +1,4 @@
-package com.kunal.easy;
+package com.adnan;
 
 public class Palindrome {
     static int rev(int n) {
