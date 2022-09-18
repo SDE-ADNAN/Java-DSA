@@ -1,4 +1,4 @@
-package com.kunal.easy;
+package com.adnan;
 
 public class Reverse {
     static int sum = 0;
