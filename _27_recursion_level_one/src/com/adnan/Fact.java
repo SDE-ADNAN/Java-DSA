@@ -1,4 +1,4 @@
-package com.kunal.easy;
+package com.adnan;
 
 public class Fact {
     public static void main(String[] args) {
