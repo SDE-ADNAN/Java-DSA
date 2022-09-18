@@ -1,4 +1,4 @@
-package com.kunal.easy;
+package com.adnan;
 
 public class DigitProduct {
     public static void main(String[] args) {
