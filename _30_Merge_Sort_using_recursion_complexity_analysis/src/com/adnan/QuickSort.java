@@ -1,4 +1,4 @@
-package com.kunal.sorting;
+package com.adnan;
 
 import java.util.Arrays;
 
