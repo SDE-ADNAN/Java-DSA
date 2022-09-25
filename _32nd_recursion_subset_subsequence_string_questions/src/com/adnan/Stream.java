@@ -44,6 +44,7 @@ public class Stream {
         }
     }
 
+    // will only skip  app and not apple
     static String skipAppNotApple(String up) {
         if (up.isEmpty()) {
             return "";
