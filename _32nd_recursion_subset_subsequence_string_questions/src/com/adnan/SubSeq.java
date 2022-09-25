@@ -17,6 +17,16 @@ public class SubSeq {
         subSeq(p+ch, up.substring(1));
         subSeq(p, up.substring(1));
     }
+    static void subSeqAscii(String p ,String up){
+        if(up.isEmpty()){
+            System.out.println(p);
+            return;
+        }
+        char ch = up.charAt(0);
+        subSeq(p+ch, up.substring(1));// add it
+        subSeq(p, up.substring(1));// reject it
+        subSeq(p+(ch+0), up.substring(1));// for ascii value
+    }
 
     // For Returning Array of SubSequences
     static ArrayList<String>  subSeqList(String p , String up){
@@ -31,4 +41,6 @@ public class SubSeq {
         left.addAll(right);
         return left;
     }
+
+
 }
