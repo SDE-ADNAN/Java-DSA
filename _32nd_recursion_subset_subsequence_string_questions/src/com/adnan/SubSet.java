@@ -25,6 +25,12 @@ public class SubSet {
             }
         }
         return outer;
+        //Time complexity O(N * N raised to 2)
+        // N --> each subset
+        // N raised to 2 --> Total subsets
+
+        // Space complexity
+        // O(N raised to 2 * N)
     }
 
 
