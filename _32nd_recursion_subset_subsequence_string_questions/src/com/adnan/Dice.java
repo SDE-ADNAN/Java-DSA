@@ -40,4 +40,16 @@ public class Dice {
         }
     }
 
+    static ArrayList<String> diceFaceRet(String p, int target, int face) {
+        if (target == 0) {
+            ArrayList<String> list = new ArrayList<>();
+            list.add(p);
+            return list;
+        }
+        ArrayList<String> list = new ArrayList<>();
+        for (int i = 1; i <= face && i <= target; i++) {
+            list.addAll(diceFaceRet(p + i, target - i, face));
+        }
+        return list;
+    }
 }
