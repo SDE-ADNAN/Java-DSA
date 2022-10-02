@@ -2,7 +2,9 @@ package com.adnan;
 
 public class N_Knights {
     public static void main(String[] args) {
-
+        int n = 4;
+        boolean[][] board = new boolean[n][n];
+        knight(board, 0, 0, 4);
     }
     static void knight(boolean[][] board, int row, int col, int knights) {
         if (knights == 0) {
