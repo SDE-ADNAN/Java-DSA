@@ -41,12 +41,12 @@ public class SudokuSolver {
                 }
             }
             // if you found some empty element in row, then break
-            if (emptyLeft == false) {
+            if (!emptyLeft) {
                 break;
             }
         }
 
-        if (emptyLeft == true) {
+        if (emptyLeft) {
             return true;
             // soduko is solved
         }
