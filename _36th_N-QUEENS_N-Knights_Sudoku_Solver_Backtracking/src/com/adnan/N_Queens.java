@@ -2,8 +2,11 @@ package com.adnan;
 
 public class N_Queens {
     public static void main(String[] args) {
-
+        int n = 4;
+        boolean[][] board = new boolean[n][n];
+        System.out.println(queens(board, 0));
     }
+
     static int queens(boolean[][] board, int row) {
         if (row == board.length) {
             display(board);
