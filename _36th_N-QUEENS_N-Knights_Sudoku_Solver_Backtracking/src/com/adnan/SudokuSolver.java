@@ -5,6 +5,15 @@ public class SudokuSolver {
 
     }
 
+    private static void display(int[][] board) {
+        for(int[] row : board) {
+            for(int num : row) {
+                System.out.print(num + " ");
+            }
+            System.out.println();
+        }
+    }
+
     static boolean isSafe(int[][] board, int row, int col, int num) {
         // check the row
         for (int i = 0; i < board.length; i++) {
