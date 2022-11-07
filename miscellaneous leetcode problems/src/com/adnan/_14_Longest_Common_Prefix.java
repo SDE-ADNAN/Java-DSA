@@ -26,6 +26,11 @@ strs[i] consists of only lowercase English letters.
 
 public class _14_Longest_Common_Prefix {
 
+    public static void main(String[] args) {
+       String[] strs = {"flower","flow","flight"};
+        System.out.println(longestCommonPrefix(strs));
+    }
+
     /*
     For a start we will describe a simple way of finding the longest prefix shared by a set of strings
      LCP(S(1)......S(n)). We will use the observation that :
@@ -53,5 +58,28 @@ public class _14_Longest_Common_Prefix {
      as now the loop through the array is completed then we return the last resultant.
 
 
+    Complexity Analysis
+
+    Time complexity : O(S), where S is the sum of all characters in all strings.
+
+    In the worst case all nnn strings are the same. The algorithm compares the string S1
+    with the other strings [S2…Sn]There are S character comparisons,
+    where S is the sum of all characters in the input array.
+
+    Space complexity : O(1). We only used constant extra space.
      */
+
+
+    static String longestCommonPrefix(String[] strs) {
+        if (strs.length == 0) return "";
+        String prefix = strs[0];
+        for (int i = 1; i < strs.length; i++)
+            while (strs[i].indexOf(prefix) != 0) {
+                prefix = prefix.substring(0, prefix.length() - 1);
+                if (prefix.isEmpty()) return "";
+            }
+        return prefix;
+    }
 }
+
+
