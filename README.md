@@ -10,3 +10,6 @@ structures and algorithms..
 
 this is needed to be done many times to remember this data structures and algos
 as these are very confusing and need to be debugged to under stand better..
+
+
+I forgot to update this repo and will again continue to do dsa questions in java
